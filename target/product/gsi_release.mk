@@ -27,6 +27,9 @@
 #
 
 BUILDING_GSI := true
+ifneq ($(filter hertzify_gsi_%,$(TARGET_PRODUCT)),)
+BUILDING_HERTZIFY_GSI := true
+endif
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/etc/init/config \
